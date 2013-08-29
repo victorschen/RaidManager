@@ -23,7 +23,7 @@
 	writeLog("$RESTART_DEFAULT_LOG");
 	
 	
-	$Restart = fopen("/usr/local/apache/htdocs/RaidManager/Monitor/default","w");
+	$Restart = fopen($MONITOR_DIR."default","w");
 	fclose($Restart);	
 
 	$_SESSION["logged"] = '';

@@ -199,7 +199,6 @@
 	$ETHERNET_SELECT	= "Ethernet card";	
 	$ETHERNET0			= "Eth0";
 	$ETHERNET1			= "Eth1";
-	$ETHERNET2			= "Eth2";
 	$BOND_SELECT		= "Binding select&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 	$BONDING			= "Binding";
 	$UNBONDING			= "Unbinding";

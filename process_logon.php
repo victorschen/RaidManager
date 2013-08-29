@@ -39,7 +39,7 @@
 			{
 				if(validateUserPassword($_GET['name'], $_GET['password'])==1)  //username, password is right
 				{
-					if(file_exists("/usr/local/apache/htdocs/RaidManager/other/error"))
+					if(file_exists($UPLOAD_DIR."other/error"))
 					{
 						header("location:boot_error.php");
 						exit(0);

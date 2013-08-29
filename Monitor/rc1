@@ -1,0 +1,8 @@
+*******************************
+DISK: /dev/sda |      WD-WMAYUN970147
+DISK: /dev/sdb |      WD-WMAYU0327702
+*******************************
+RAID: /dev/md0 | 0 | 0
+RAIDDISK /dev/sdc |      WD-WCAYUL661463
+RAIDDISK /dev/sdd |      WD-WCASYF106983
+*******************************

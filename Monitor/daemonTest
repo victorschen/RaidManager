@@ -1,0 +1,39 @@
+Disk /dev/sda setAttribute||SN:      WD-WMAYUN970147 ||Cap: 500.11 GB ||Vendor: ATA      ||status: 0 
+Disk /dev/sdb setAttribute||SN:      WD-WMAYU0327702 ||Cap: 500.11 GB ||Vendor: ATA      ||status: 0 
+Disk /dev/sdc setAttribute||SN:      WD-WCAYUL661463 ||Cap: 500.11 GB ||Vendor: ATA      ||status: 0 
+Disk /dev/sdd setAttribute||SN:      WD-WCASYF106983 ||Cap: 500.11 GB ||Vendor: ATA      ||status: 0 
+***DISKArray : refreshArray *** 
+===refreshStatus DISK /dev/sda: refreshStatus=== 
+===refreshStatus DISK /dev/sdb: refreshStatus=== 
+===refreshStatus DISK /dev/sdc: refreshStatus=== 
+===refreshStatus DISK /dev/sdd: refreshStatus=== 
+Disk /dev/sda setAttribute||SN:      WD-WMAYUN970147 ||Cap: 500.11 GB ||Vendor: ATA      ||status: 0 
+Disk /dev/sdb setAttribute||SN:      WD-WMAYU0327702 ||Cap: 500.11 GB ||Vendor: ATA      ||status: 0 
+Disk /dev/sdc setAttribute||SN:      WD-WCAYUL661463 ||Cap: 500.11 GB ||Vendor: ATA      ||status: 0 
+Disk /dev/sdd setAttribute||SN:      WD-WCASYF106983 ||Cap: 500.11 GB ||Vendor: ATA      ||status: 0 
+***DISKArray : refreshArray *** 
+===refreshStatus DISK /dev/sda: refreshStatus=== 
+===refreshStatus DISK /dev/sdb: refreshStatus=== 
+===refreshStatus DISK /dev/sdc: refreshStatus=== 
+===refreshStatus DISK /dev/sdd: refreshStatus=== 
+SingleRaid[/dev/md0]:||level:0||raidDiskNum:(null) 
+Disk /dev/sda setAttribute||SN:      WD-WMAYUN970147 ||Cap: 500.11 GB ||Vendor: ATA      ||status: 0 
+Disk /dev/sdb setAttribute||SN:      WD-WMAYU0327702 ||Cap: 500.11 GB ||Vendor: ATA      ||status: 0 
+Disk /dev/sdc setAttribute||SN:      WD-WCAYUL661463 ||Cap: 500.11 GB ||Vendor: ATA      ||status: 0 
+Disk /dev/sdd setAttribute||SN:      WD-WCASYF106983 ||Cap: 500.11 GB ||Vendor: ATA      ||status: 0 
+***DISKArray : refreshArray *** 
+===refreshStatus DISK /dev/sda: refreshStatus=== 
+===refreshStatus DISK /dev/sdb: refreshStatus=== 
+===refreshStatus DISK /dev/sdc: refreshStatus=== 
+===refreshStatus DISK /dev/sdd: refreshStatus=== 
+SingleRaid[/dev/md0]:||level:0||raidDiskNum:(null) 
+Disk /dev/sda setAttribute||SN:      WD-WMAYUN970147 ||Cap: 500.11 GB ||Vendor: ATA      ||status: 0 
+Disk /dev/sdb setAttribute||SN:      WD-WMAYU0327702 ||Cap: 500.11 GB ||Vendor: ATA      ||status: 0 
+Disk /dev/sdc setAttribute||SN:      WD-WCAYUL661463 ||Cap: 500.11 GB ||Vendor: ATA      ||status: 0 
+Disk /dev/sdd setAttribute||SN:      WD-WCASYF106983 ||Cap: 500.11 GB ||Vendor: ATA      ||status: 0 
+***DISKArray : refreshArray *** 
+===refreshStatus DISK /dev/sda: refreshStatus=== 
+===refreshStatus DISK /dev/sdb: refreshStatus=== 
+===refreshStatus DISK /dev/sdc: refreshStatus=== 
+===refreshStatus DISK /dev/sdd: refreshStatus=== 
+SingleRaid[/dev/md0]:||level:0||raidDiskNum:(null) 

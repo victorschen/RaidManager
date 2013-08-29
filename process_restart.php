@@ -22,7 +22,7 @@
 	include "log/Log.php";
 	writeLog("$RESTART_LOG");
 	
-	$Restart = fopen("/usr/local/apache/htdocs/RaidManager/Monitor/reboot_event","w");
+	$Restart = fopen($MONITOR_DIR."reboot_event","w");
 	fclose($Restart);
 	
 		

@@ -14,7 +14,7 @@
 	$pri = "a";
 	include "isLogOn.php";	
 	
-	if(file_exists("/usr/local/apache/htdocs/RaidManager/Monitor/cmd"))
+	if(file_exists($MONITOR_DIR."cmd"))
 	{
 		$str = "<script language='javaScript'>";
 		$str .= "window.history.back();";
@@ -31,7 +31,7 @@
 		
 		/* 将配置界面传过来的命令行字符串保存成一个cmd的文件 */
 		$cmdTypeFlag="0";
-		chdir("/usr/local/apache/htdocs/RaidManager/Monitor/");
+		chdir($MONITOR_DIR);
 		$RC = fopen("cmd","w");		
 		system('chmod a+rwx cmd');
 		$xmlString = $_POST['cmdsave'];		

@@ -4,7 +4,8 @@
 $DEFAULT_LANGUAGE	= "zh_CN";		//用户第一次登录时默认使用的语言
 $DEFAULT_STYLE		= "default";	//用户第一次登录时默认使用的视觉效果
 $EDITION			= "fc-scsi";	//'fc-scsi','iscsi-sata'其中之一
-$UPLOAD_DIR			= "/usr/local/apache/htdocs/RaidManager/";  //"var/www/html/RaidManager/"
+$UPLOAD_DIR			= "/var/www/html/RaidManager/";  //"var/www/html/RaidManager/"
+$MONITOR_DIR 		= $UPLOAD_DIR."Monitor/";
 
 
 ?>

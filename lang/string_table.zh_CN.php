@@ -188,7 +188,6 @@
 	$ETHERNET_SELECT	= "Íø&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¿¨";
 	$ETHERNET0			= "Íø¿¨0";
 	$ETHERNET1			= "Íø¿¨1";
-	$ETHERNET2			= "Íø¿¨2";
 	$BOND_SELECT		= "ÊÇ&nbsp;·ñ&nbsp;°ó&nbsp;¶¨&nbsp;Íø&nbsp;¿¨";
 	$BONDING			= "°ó¶¨Íø¿¨";
 	$UNBONDING			= "²»°ó¶¨Íø¿¨";

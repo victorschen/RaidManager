@@ -38,12 +38,9 @@ foreach ($lines as $line_num => $line) {
 //得到主网卡和备用网卡当前的设置
 $eth0 = file('/etc/sysconfig/network-scripts/ifcfg-eth0');
 $eth1 = file('/etc/sysconfig/network-scripts/ifcfg-eth1');
-//万兆网卡的配置文件
-$eth2 = file('/etc/sysconfig/network-scripts/ifcfg-eth2');
 
 $settingsEth0 = array();
 $settingsEth1 = array();
-$settingsEth2 = array();
 
 foreach ($eth0 as $line_num => $line) {
     $linecontent = split("=",$line);
@@ -52,10 +49,6 @@ foreach ($eth0 as $line_num => $line) {
 foreach ($eth1 as $line_num => $line) {
     $linecontent = split("=",$line);
     $settingsEth1[$linecontent[0]] = $linecontent[1];
-}
-foreach ($eth2 as $line_num => $line) {
-    $linecontent = split("=",$line);
-    $settingsEth2[$linecontent[0]] = $linecontent[1];
 }
 ob_end_flush();
 ?>
@@ -114,7 +107,7 @@ ob_end_flush();
 	   	}
 	    else
 		{
-			if(document.getElementById('eth0').checked==false && document.getElementById('eth1').checked==false && document.getElementById('eth2').checked==false)
+			if(document.getElementById('eth0').checked==false && document.getElementById('eth1').checked==false)
 			{
 				document.getElementById('ethernetTip').innerHTML = '<?php echo $ERROR_ETHERNET; ?>';
 				document.getElementById('ethernetTip').style.display = 'block'; 
@@ -150,17 +143,11 @@ ob_end_flush();
 			formNames.netmask.value = '<?php echo trim($settingsEth0['NETMASK']) ?>';
 			formNames.gateway.value = '<?php echo trim($settingsEth0['GATEWAY']) ?>';
 		}
-		else if(ethernet=='ethernet1')
+		else
 		{
 			formNames.ipaddr.value = '<?php echo trim($settingsEth1['IPADDR']) ?>';
 			formNames.netmask.value = '<?php echo trim($settingsEth1['NETMASK']) ?>';
 			formNames.gateway.value = '<?php echo trim($settingsEth1['GATEWAY']) ?>';
-		}
-		else
-		{
-			formNames.ipaddr.value = '<?php echo trim($settingsEth2['IPADDR']) ?>';
-			formNames.netmask.value = '<?php echo trim($settingsEth2['NETMASK']) ?>';
-			formNames.gateway.value = '<?php echo trim($settingsEth2['GATEWAY']) ?>';
 		}
 	}
 
@@ -216,30 +203,28 @@ ob_end_flush();
                           <td align="left" bgcolor="#B8D3F8"><nobr><?php echo $ETHERNET_SELECT; ?>：</nobr></td>
                           <td bgcolor="#DAE9FC">
 						  <input id="eth0" type="radio" name="ethernet" value="eth0" onClick="showEthernetDetail('ethernet0')" checked="checked"><?php echo $ETHERNET0; ?>&nbsp;&nbsp;&nbsp;
-                          <input id="eth1" type="radio" name="ethernet" value="eth1"  onClick="showEthernetDetail('ethernet1')" ONFOCUS="document.body.onselectstart = null" ONBLUR="document.body.onselectstart = returnFalse;"><?php echo $ETHERNET1; ?>&nbsp;&nbsp;&nbsp;
-					      <input id="eth2" type="radio" name="ethernet" value="eth2"  onClick="showEthernetDetail('ethernet2')" ONFOCUS="document.body.onselectstart = null" ONBLUR="document.body.onselectstart = returnFalse;"><?php echo $ETHERNET2; ?>
-					  </td>
-                      <td bgcolor="#DAE9FC" width="277"><div id='ethernetTip' class='errorTip'></div></td>
+                      <input id="eth1" type="radio" name="ethernet" value="eth1"  onClick="showEthernetDetail('ethernet1')" ONFOCUS="document.body.onselectstart = null" ONBLUR="document.body.onselectstart = returnFalse;"><?php echo $ETHERNET1; ?>					  </td>
+                      <td bgcolor="#DAE9FC" width="337"><div id='ethernetTip' class='errorTip'></div></td>
                     </tr>
                     <tr> 
                       <td width="14" bgcolor="#B8D3F8"><img src="images/dot.gif" width="14" height="11"></td>
                       <td width="29" align="left" bgcolor="#B8D3F8"><nobr><?php echo $IP_ADDRESS; ?>：</nobr></td>
-                      <td width="200" bgcolor="#DAE9FC"> 
-                      <input name="ipaddr" type="text" size="27" ONFOCUS="document.body.onselectstart = null" onblur='checkIPAddress("1",this.value);document.body.onselectstart = returnFalse;' id='1' value="<?php echo $settingsEth0['IPADDR']; ?>" onkeydown='if(event.keyCode==13) event.keyCode=9;'></td>
-                      <td width="277" bgcolor="#DAE9FC"><div id='span_1' class='errorTip'></div></td>
+                      <td width="140" bgcolor="#DAE9FC"> 
+                      <input name="ipaddr" type="text" size="20" ONFOCUS="document.body.onselectstart = null" onblur='checkIPAddress("1",this.value);document.body.onselectstart = returnFalse;' id='1' value="<?php echo $settingsEth0['IPADDR']; ?>" onkeydown='if(event.keyCode==13) event.keyCode=9;'></td>
+                      <td width="337" bgcolor="#DAE9FC"><div id='span_1' class='errorTip'></div></td>
                     </tr>
                     <tr> 
                       <td bgcolor="#B8D3F8"><img src="images/dot.gif" width="14" height="11"></td>
                       <td align="left" bgcolor="#B8D3F8"><nobr><?php echo $SUBNET_MASK; ?>：</nobr></td>
                       <td bgcolor="#DAE9FC"> 
-                      <input name="netmask" type="text" size="27" ONFOCUS="document.body.onselectstart = null" onblur='checkIPAddress("2",this.value);document.body.onselectstart = returnFalse;' id='2' value="<?php echo $settingsEth0['NETMASK']; ?>" onkeydown='if(event.keyCode==13) event.keyCode=9;'></td>
+                      <input name="netmask" type="text" size="20" ONFOCUS="document.body.onselectstart = null" onblur='checkIPAddress("2",this.value);document.body.onselectstart = returnFalse;' id='2' value="<?php echo $settingsEth0['NETMASK']; ?>" onkeydown='if(event.keyCode==13) event.keyCode=9;'></td>
                       <td bgcolor="#DAE9FC"><div id='span_2' class='errorTip'></div></td>
                     </tr>
                     <tr> 
                       <td bgcolor="#B8D3F8"><img src="images/dot.gif" width="14" height="11"></td>
                       <td align="left" bgcolor="#B8D3F8"><nobr><?php echo $GATEWAY; ?>：</nobr></td>
                       <td bgcolor="#DAE9FC"> 
-                      <input name="gateway" type="text" size="27" onblur='checkIPAddress("3",this.value);'  id='3' value="<?php echo $settingsEth0['GATEWAY']; ?>" onkeydown='if(event.keyCode==13) checkSubmit();'></td>
+                      <input name="gateway" type="text" size="20" onblur='checkIPAddress("3",this.value);'  id='3' value="<?php echo $settingsEth0['GATEWAY']; ?>" onkeydown='if(event.keyCode==13) checkSubmit();'></td>
                       <td bgcolor="#DAE9FC"><div id='span_3' class='errorTip'></div></td>
                     </tr>
                     <tr align="center"> 

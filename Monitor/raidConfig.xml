@@ -1,3 +1,3 @@
 <?xml version="1.0"?>
-<Rack diskNum="0" raidNum="0" lastRaidIndex="0">
-</Rack>
+<Rack diskNum="4" raidNum="0" lastRaidIndex="0">
+<Disk type="SCSI" status="0" sn="     WD-WMAYUN970147" vendor="ATA     " capacity="500.11 GB" devName="/dev/sda" isSpareDisk="0" host="" scsiID="0" lun="" channel=""/><Disk type="SCSI" status="0" sn="     WD-WMAYU0327702" vendor="ATA     " capacity="500.11 GB" devName="/dev/sdb" isSpareDisk="0" host="" scsiID="1" lun="" channel=""/><Disk type="SCSI" status="0" sn="     WD-WCAYUL661463" vendor="ATA     " capacity="500.11 GB" devName="/dev/sdc" isSpareDisk="0" host="" scsiID="2" lun="" channel=""/><Disk type="SCSI" status="0" sn="     WD-WCASYF106983" vendor="ATA     " capacity="500.11 GB" devName="/dev/sdd" isSpareDisk="0" host="" scsiID="3" lun="" channel=""/></Rack>

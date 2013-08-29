@@ -29,7 +29,7 @@
     $_SESSION["privilege"] = '';
 
 	
-	$ShutDown = fopen("/usr/local/apache/htdocs/RaidManager/Monitor/halt_event","w");
+	$ShutDown = fopen($MONITOR_DIR."Monitor/halt_event","w");
 	fclose($ShutDown);
 	
 	//header("location:index.php");

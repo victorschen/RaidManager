@@ -15,8 +15,7 @@
 	include "isLogOn.php";
 	
 	
-	
-	if(file_exists("/usr/local/apache/htdocs/RaidManager/Monitor/raidConfigNew.xml"))
+	if(file_exists($MONITOR_DIR."raidConfigNew.xml"))
 	{
 		$str = "<script language='javaScript'>";
 		$str .= "window.history.back();";
@@ -27,12 +26,18 @@
 	}
 	else
 	{
+		
+		  echo "<script language='javaScript'>
+		 	window.alert('".$MONITOR_DIR ."');
+		 	</script>";
+		 
+
 		//记录操作日志
 		include "log/Log.php";
 		writeLog("$CONFIGURATION_LOG");
 		
 		//将Web界面的阵列配置保存成一个raidConfigNew.xml的文件
-		chdir("/usr/local/apache/htdocs/RaidManager/Monitor/");
+		chdir($MONITOR_DIR);
 		$RC = fopen("raidConfigNew.xml","w");
 		system("chmod a+rwx raidConfigNew.xml");
 		$xmlString = $_POST['xmlsave'];
